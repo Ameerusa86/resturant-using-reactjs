@@ -26,7 +26,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
               >
-                Home
+                <Link to="/">Home</Link>
               </ScrollLink>
             </a>
           </li>
