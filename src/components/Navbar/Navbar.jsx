@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { Link } from "react-scroll";
 
 import images from "../../constants/images";
 
@@ -17,19 +18,54 @@ const Navbar = () => {
         </div>
         <ul className="app__navbar-links">
           <li className="p__opensans">
-            <a href="/">Home</a>
+            <a href="/">
+              <Link activeClass="active" to="home" smooth={true} duration={500}>
+                Home
+              </Link>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">About</a>
+            <a href="/">
+              <Link
+                activeClass="active"
+                to="about"
+                smooth={true}
+                duration={500}
+              >
+                About
+              </Link>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Menu</a>
+            <a href="/">
+              <Link activeClass="active" to="menu" smooth={true} duration={500}>
+                Menu
+              </Link>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Awards</a>
+            <a href="/">
+              <Link
+                activeClass="active"
+                to="awards"
+                smooth={true}
+                duration={500}
+              >
+                Awards
+              </Link>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Contact</a>
+            <a href="/">
+              <Link
+                activeClass="active"
+                to="contact"
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </a>
           </li>
         </ul>
         <div className="app__navbar-login">
