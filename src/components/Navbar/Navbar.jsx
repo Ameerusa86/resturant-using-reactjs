@@ -31,6 +31,7 @@ const Navbar = () => {
                 to="about"
                 smooth={true}
                 duration={500}
+                offset={50}
               >
                 About
               </Link>
@@ -38,7 +39,13 @@ const Navbar = () => {
           </li>
           <li className="p__opensans">
             <a href="/">
-              <Link activeClass="active" to="menu" smooth={true} duration={500}>
+              <Link
+                activeClass="active"
+                to="menu"
+                smooth={true}
+                duration={500}
+                offset={170}
+              >
                 Menu
               </Link>
             </a>
