@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import images from "../../constants/images";
 
@@ -19,14 +20,19 @@ const Navbar = () => {
         <ul className="app__navbar-links">
           <li className="p__opensans">
             <a href="/">
-              <Link activeClass="active" to="home" smooth={true} duration={500}>
+              <ScrollLink
+                activeClass="active"
+                to="home"
+                smooth={true}
+                duration={500}
+              >
                 Home
-              </Link>
+              </ScrollLink>
             </a>
           </li>
           <li className="p__opensans">
             <a href="/">
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to="about"
                 smooth={true}
@@ -34,44 +40,44 @@ const Navbar = () => {
                 offset={50}
               >
                 About
-              </Link>
+              </ScrollLink>
             </a>
           </li>
           <li className="p__opensans">
             <a href="/">
-              <Link
+              <ScrollLink
                 activeClass="active"
-                to="menu"
+                to="/"
                 smooth={true}
                 duration={500}
                 offset={170}
               >
-                Menu
-              </Link>
+                <Link to="/menu">Menu</Link>
+              </ScrollLink>
             </a>
           </li>
           <li className="p__opensans">
             <a href="/">
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to="awards"
                 smooth={true}
                 duration={500}
               >
                 Awards
-              </Link>
+              </ScrollLink>
             </a>
           </li>
           <li className="p__opensans">
             <a href="/">
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to="contact"
                 smooth={true}
                 duration={500}
               >
                 Contact
-              </Link>
+              </ScrollLink>
             </a>
           </li>
         </ul>
