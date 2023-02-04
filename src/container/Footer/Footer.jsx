@@ -21,7 +21,7 @@ const Footer = () => (
       </div>
 
       <div className="app__footer-links_logo">
-        <img src={images.gericht} alt="footer_logo" />
+        <img src={images.logo2} alt="footer_logo" />
         <p className="p__opensans">
           &quot;The best way to find yourself is to lose yourself in the service
           of others.&quot;
