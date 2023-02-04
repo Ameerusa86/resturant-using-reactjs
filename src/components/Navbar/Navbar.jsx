@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import images from "../../constants/images";
 
@@ -17,19 +19,66 @@ const Navbar = () => {
         </div>
         <ul className="app__navbar-links">
           <li className="p__opensans">
-            <a href="/">Home</a>
+            <a href="/">
+              <ScrollLink
+                activeClass="active"
+                to="home"
+                smooth={true}
+                duration={500}
+              >
+                <Link to="/">Home</Link>
+              </ScrollLink>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">About</a>
+            <a href="/">
+              <ScrollLink
+                activeClass="active"
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={50}
+              >
+                About
+              </ScrollLink>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Menu</a>
+            <a href="/">
+              <ScrollLink
+                activeClass="active"
+                to="/"
+                smooth={true}
+                duration={500}
+                offset={170}
+              >
+                <Link to="/menu">Menu</Link>
+              </ScrollLink>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Awards</a>
+            <a href="/">
+              <ScrollLink
+                activeClass="active"
+                to="awards"
+                smooth={true}
+                duration={500}
+              >
+                Awards
+              </ScrollLink>
+            </a>
           </li>
           <li className="p__opensans">
-            <a href="/">Contact</a>
+            <a href="/">
+              <ScrollLink
+                activeClass="active"
+                to="contact"
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </ScrollLink>
+            </a>
           </li>
         </ul>
         <div className="app__navbar-login">
