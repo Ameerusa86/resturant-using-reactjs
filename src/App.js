@@ -5,6 +5,7 @@ import FoodMenu from "./Pages/FoodMenu/FoodMenu";
 import Home from "./Pages/Home";
 
 const App = () => {
+  console.disableYellowBox = true;
   return (
     <BrowserRouter>
       <Routes>
